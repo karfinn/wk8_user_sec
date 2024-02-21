@@ -28,9 +28,8 @@ end
    
   def destroy
     # logout the user, ended the session and delete cookies
-    cookies ["monster"] = nil
-    session["user_id"] = nil
     flash["notice"] = "Goodbye."
+    session["user_id"] = nil
     redirect_to "/login"
   end
 end
